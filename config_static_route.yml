@@ -15,6 +15,6 @@
                        distance_metric: 110
                        tag: 40
          state: merged  
-     - name: Print Stuff
-       debug:
-          msg: "{{ ansible_network_resources}}"
+      - name: Print all available facts
+        ansible.builtin.debug:
+          var: ansible_facts
