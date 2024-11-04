@@ -21,4 +21,4 @@
          state: gathered
      - name: Print all available facts
        ansible.builtin.debug:
-         var: ansible_network_resources
+         var: ansible_facts.ansible_network_resources
