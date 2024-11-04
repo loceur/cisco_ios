@@ -11,7 +11,7 @@
                  - dest: "{{ IPCIDR }}"
                    next_hops:
                      - forward_router_address: "{{ NEXTHOP }}"
-                       name: inserted_via_IAS
+                       name: "{{ DESCRIPTION }}" 
                        distance_metric: 110
                        tag: 40
          state: merged  
