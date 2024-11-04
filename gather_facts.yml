@@ -9,4 +9,4 @@
        register: cisco_output
      - name: Print Stuff
        debug:
-          msg: "{{ ansible_facts }}"t
+          msg: "{{ ansible_facts }}"
