@@ -8,7 +8,7 @@
          gather_network_resources: all
        register: cisco_output
      - name: Update banner
-       cisco.ios.ios_banner::
+       cisco.ios.ios_banner:
          banner: login
          text: |
             NFD Banner Update
