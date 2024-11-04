@@ -18,7 +18,7 @@
                        name: inserted_via_IAS
                        distance_metric: 110
                        tag: 40
-       state: merged  
+         state: merged  
 
      - name: Print Stuff
        debug:
