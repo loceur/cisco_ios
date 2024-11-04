@@ -15,6 +15,10 @@
                        distance_metric: 110
                        tag: 40
          state: merged  
+     - name: Gather facts of static routes
+       cisco.ios.ios_static_routes:
+         config:
+         state: gathered
      - name: Print all available facts
        ansible.builtin.debug:
          var: ansible_facts
