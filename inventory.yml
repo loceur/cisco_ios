@@ -1,0 +1,16 @@
+---
+vars:
+  ansible_python_interpreter: python
+  ansible_user: itential
+  ansible_password: itential
+
+children:
+  ios:
+    hosts:
+      cisco_switch: { ansible_host: 10.1.6.83 }
+    vars:
+      ansible_network_os: ios
+      ansible_become: yes
+      ansible_become_method: enable
+      ansible_connection: network_cli
+      ansible_network_provider: ansible-network.cisco_ios

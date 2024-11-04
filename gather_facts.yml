@@ -1,0 +1,9 @@
+---
+
+- hosts: ios
+  tasks:
+     - name: Gather IOS Facts
+       cisco.ios.ios_facts:
+         gather_subset: all
+         gather_network_resources: all
+       register: cisco_output

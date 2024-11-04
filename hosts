@@ -1,0 +1,9 @@
+[ios]
+10.1.6.83 ansible_host=10.1.6.83  
+
+[ios:vars]
+
+ansible_ssh_pass=itential
+ansible_user=itential
+ansible_network_os=ios
+ansible_connection=network_cli
