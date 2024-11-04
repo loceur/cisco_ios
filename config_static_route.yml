@@ -2,10 +2,6 @@
 
 - hosts: ios
   tasks:
-     - name: Gather IOS Facts
-       cisco.ios.ios_facts:
-         gather_subset: all
-         gather_network_resources: all
      - name: Update Routes
        cisco.ios.ios_static_routes:
          config:
@@ -19,11 +15,6 @@
                        distance_metric: 110
                        tag: 40
          state: merged  
-     - name: Gather facts of static routes
-       cisco.ios.ios_static_routes:
-         config:
-         state: gathered
-
      - name: Print Stuff
        debug:
-          msg: "{{ commands }}"
+          msg: "{{ ansible_network_resources}}"
