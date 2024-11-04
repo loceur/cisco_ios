@@ -19,6 +19,10 @@
        cisco.ios.ios_static_routes:
          config:
          state: gathered
-     - name: Print all available facts
-       ansible.builtin.debug:
-         var: ansible_facts.ansible_network_resources
+     - name: Gather IOS Facts
+       cisco.ios.ios_facts:
+         gather_subset: all
+         gather_network_resources: all
+     - name: Print Stuff
+       debug:
+          msg: "{{ ansible_facts }}"
