@@ -12,9 +12,9 @@
            - address_families:
              - afi: ipv4
                routes:
-                 - dest: {{ IPCIDR }}
+                 - dest: "{{ IPCIDR }}"
                    next_hops:
-                     - forward_router_address: {{ NEXTHOP }}
+                     - forward_router_address: "{{ NEXTHOP }}"
                        name: inserted_via_IAS
                        distance_metric: 110
                        tag: 40
