@@ -13,7 +13,7 @@
          text: |
             NFD Banner Update
             Banner Last Upated - {{ now(utc=true,fmt='%Y-%m-%d %H:%M:%S') }}
-            Host -  {{cisco_output.net_hostname}}
+            Host -  {{cisco_output.ansible_net_hostname}}
      - name: Print Stuff
        debug:
           msg: "{{ ansible_facts }}"
