@@ -1,0 +1,19 @@
+---
+
+- hosts: ios
+  tasks:
+     - name: Gather IOS Facts
+       cisco.ios.ios_facts:
+         gather_subset: all
+         gather_network_resources: all
+       register: cisco_output
+     - name: Update banner
+       cisco.ios.ios_banner::
+         banner: login
+         text: |
+            NFD Banner Update
+            Banner Last Upated - {{ now(utc=true,fmt='%Y-%m-%d %H:%M:%S') }}
+            Host -  {{cisco_output.net_hostname}}
+     - name: Print Stuff
+       debug:
+          msg: "{{ ansible_facts }}"
