@@ -7,3 +7,6 @@
          gather_subset: all
          gather_network_resources: all
        register: cisco_output
+     - name: Print Stuff
+       debug:
+          msg: "{{ ansible_facts }}"t
