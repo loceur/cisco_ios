@@ -25,4 +25,4 @@
          gather_network_resources: all
      - name: Print Stuff
        debug:
-          msg: "{{ ansible_facts }}"
+          msg: "{{ ansible_facts.network_resources }}"
