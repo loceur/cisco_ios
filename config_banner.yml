@@ -1,6 +1,8 @@
 ---
 
 - hosts: ios
+  vars:
+    update: "Nothing For Today"
   tasks:
      - name: Gather IOS Facts
        cisco.ios.ios_facts:
@@ -11,6 +13,7 @@
          banner: login
          text: |
             NFD Banner Update
+            Update Details - {{ update }}
             Banner Last Upated - {{ now(utc=true,fmt='%Y-%m-%d %H:%M:%S') }}
             Host -  {{ansible_net_hostname}}
      - name: Print Stuff
