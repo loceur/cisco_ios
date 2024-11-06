@@ -14,8 +14,9 @@
          text: |
             NFD Banner Update
             Update Details - {{ update }}
-            Banner Last Upated - {{ now(utc=true,fmt='%Y-%m-%d %H:%M:%S') }}
+            Banner Last Updated - {{ now(utc=true,fmt='%Y-%m-%d %H:%M:%S') }}
             Host -  {{ansible_net_hostname}}
+            Also - Bob is great
      - name: Print Stuff
        debug:
           msg: "{{ ansible_facts }}"
